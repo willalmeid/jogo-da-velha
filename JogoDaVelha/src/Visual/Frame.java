@@ -15,7 +15,9 @@ public class Frame extends JFrame {
 	
 	public static void main(String[] args) {
 		Frame window = new Frame();
+		PanelJogo jogo = new PanelJogo();
 		
+		window.setContentPane(jogo);
 		
 		// Verificar Funcionalidade depois
 		window.repaint();

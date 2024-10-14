@@ -20,6 +20,7 @@ public class PanelJogo extends JPanel implements ActionListener{
 	private JButton buttonTopRight;
 	private JLabel labelTitle;
 	private JLabel labelJogada;
+	private JLabel lblOJogador;
 	
 	public PanelJogo() {
 		setLayout(null);
@@ -37,98 +38,11 @@ public class PanelJogo extends JPanel implements ActionListener{
 		add(getButtonTopRight());
 		add(getLabelTitle());
 		add(getLabelJogada());
+		add(getLblOJogador());
 		
 	}
 	
-	//------------------------------------------------------------- Methods of Access ---------------------------------------------------------------------
-	private JButton getButtonCenterCenter() {
-		if (buttonCenterCenter == null) {
-			buttonCenterCenter = new JButton("");
-			buttonCenterCenter.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			buttonCenterCenter.setBounds(562, 282, 155, 156);
-		}
-		return buttonCenterCenter;
-	}
-	
-	private JButton getButtonTopCenter() {
-		if (buttonTopCenter == null) {
-			buttonTopCenter = new JButton("");
-			buttonTopCenter.setBounds(562, 115, 155, 156);
-		}
-		return buttonTopCenter;
-	}
-	private JButton getButtonBotCenter() {
-		if (buttonBotCenter == null) {
-			buttonBotCenter = new JButton("");
-			buttonBotCenter.setBounds(562, 449, 155, 156);
-		}
-		return buttonBotCenter;
-	}
-	
-	private JButton getButtonBotLeft() {
-		if (buttonBotLeft == null) {
-			buttonBotLeft = new JButton("");
-			buttonBotLeft.setBounds(397, 449, 155, 156);
-		}
-		return buttonBotLeft;
-	}
-	
-	private JButton getButtonBotRight() {
-		if (buttonBotRight == null) {
-			buttonBotRight = new JButton("");
-			buttonBotRight.setBounds(727, 449, 155, 156);
-		}
-		return buttonBotRight;
-	}
-	
-	private JButton getButtonCenterLeft() {
-		if (buttonCenterLeft == null) {
-			buttonCenterLeft = new JButton("");
-			buttonCenterLeft.setBounds(397, 282, 155, 156);
-		}
-		return buttonCenterLeft;
-	}
-	
-	private JButton getButtonCenterRigth() {
-		if (buttonCenterRigth == null) {
-			buttonCenterRigth = new JButton("");
-			buttonCenterRigth.setBounds(727, 282, 155, 156);
-		}
-		return buttonCenterRigth;
-	}
-	
-	private JButton getButtonTopLeft() {
-		if (buttonTopLeft == null) {
-			buttonTopLeft = new JButton("");
-			buttonTopLeft.setBounds(397, 115, 155, 156);
-		}
-		return buttonTopLeft;
-	}
-	
-	private JButton getButtonTopRight() {
-		if (buttonTopRight == null) {
-			buttonTopRight = new JButton("");
-			buttonTopRight.setBounds(727, 115, 155, 156);
-		}
-		return buttonTopRight;
-	}
-
-	// 
-	
-	private void addEventos() {
-		getButtonTopLeft().addActionListener(this);		
-	}
-	
-	public void actionPerformed(ActionEvent e) {
-//		if(vez % 2 == 0) {
-//			// Adicionar ao Buttun "X"
-//		} else {
-//			//Adicionar ao Button "O"
-//		}
-	}
+	//------------------------------------------------------------- Labal Access Methods ---------------------------------------------------------------------
 	private JLabel getLabelTitle() {
 		if (labelTitle == null) {
 			labelTitle = new JLabel("Jogo da Velha");
@@ -144,5 +58,120 @@ public class PanelJogo extends JPanel implements ActionListener{
 			labelJogada.setBounds(397, 81, 485, 25);
 		}
 		return labelJogada;
+	}
+	
+	//------------------------------------------------------------- Button Access Methods ---------------------------------------------------------------------
+	private JButton getButtonTopLeft() {
+		if (buttonTopLeft == null) {
+			buttonTopLeft = new JButton("X");
+			buttonTopLeft.setFont(new Font("Tahoma", Font.BOLD, 50));
+			buttonTopLeft.setBounds(397, 115, 155, 156);
+		}
+		return buttonTopLeft;
+	}
+	
+	private JButton getButtonTopCenter() {
+		if (buttonTopCenter == null) {
+			buttonTopCenter = new JButton("O");
+			buttonTopCenter.setFont(new Font("Tahoma", Font.BOLD, 50));
+			buttonTopCenter.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
+			buttonTopCenter.setBounds(562, 115, 155, 156);
+		}
+		return buttonTopCenter;
+	}
+	
+	private JButton getButtonTopRight() {
+		if (buttonTopRight == null) {
+			buttonTopRight = new JButton("X");
+			buttonTopRight.setBounds(727, 115, 155, 156);
+			buttonTopRight.setFont(new Font("Tahoma", Font.BOLD, 50));
+		}
+		return buttonTopRight;
+	}
+	
+	private JButton getButtonCenterLeft() {
+		if (buttonCenterLeft == null) {
+			buttonCenterLeft = new JButton("O");
+			buttonCenterLeft.setBounds(397, 282, 155, 156);
+			buttonCenterLeft.setFont(new Font("Tahoma", Font.BOLD, 50));
+		}
+		return buttonCenterLeft;
+	}
+	
+	private JButton getButtonCenterCenter() {
+		if (buttonCenterCenter == null) {
+			buttonCenterCenter = new JButton("X");
+			buttonCenterCenter.setFont(new Font("Tahoma", Font.BOLD, 50));
+			buttonCenterCenter.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
+			buttonCenterCenter.setBounds(562, 282, 155, 156);
+		}
+		return buttonCenterCenter;
+	}
+	
+	private JButton getButtonCenterRigth() {
+		if (buttonCenterRigth == null) {
+			buttonCenterRigth = new JButton("O");
+			buttonCenterRigth.setBounds(727, 282, 155, 156);
+			buttonCenterRigth.setFont(new Font("Tahoma", Font.BOLD, 50));
+		}
+		return buttonCenterRigth;
+	}
+	
+	private JButton getButtonBotLeft() {
+		if (buttonBotLeft == null) {
+			buttonBotLeft = new JButton("X");
+			buttonBotLeft.setBounds(397, 449, 155, 156);
+			buttonBotLeft.setFont(new Font("Tahoma", Font.BOLD, 50));
+		}
+		return buttonBotLeft;
+	}
+	
+	private JButton getButtonBotCenter() {
+		if (buttonBotCenter == null) {
+			buttonBotCenter = new JButton("O");
+			buttonBotCenter.setBounds(562, 449, 155, 156);
+			buttonBotCenter.setFont(new Font("Tahoma", Font.BOLD, 50));
+		}
+		return buttonBotCenter;
+	}
+	
+	
+	private JButton getButtonBotRight() {
+		if (buttonBotRight == null) {
+			buttonBotRight = new JButton("X");
+			buttonBotRight.setBounds(727, 449, 155, 156);
+			buttonBotRight.setFont(new Font("Tahoma", Font.BOLD, 50));
+		}
+		return buttonBotRight;
+	}
+
+	//---------------------------------------------------------------------- Events --------------------------------------------------------------------
+	private void addEventos() {
+		getButtonTopLeft().addActionListener(this);	
+		getButtonTopCenter().addActionListener(this);	
+		getButtonTopRight().addActionListener(this);		
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		getButtonTopLeft().setText("X");
+//		if(vez % 2 == 0) {
+//			// Adicionar ao Buttun "X"
+//		} else {
+//			//Adicionar ao Button "O"
+//		}
+	}
+	private JLabel getLblOJogador() {
+		if (lblOJogador == null) {
+			lblOJogador = new JLabel("O Jogador 1 Ganhou!");
+			lblOJogador.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			lblOJogador.setBounds(545, 616, 190, 25);
+		}
+		return lblOJogador;
 	}
 }
