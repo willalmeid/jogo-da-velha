@@ -31,8 +31,7 @@ public class ControladorPanelJogo implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		
-		this.jogador = (this.vez % 2 == 0) ? 2 : 1;
+	
     	this.simbolo = (this.vez % 2 == 0) ? "X" : "O";
     	
     	// Teste dos botões
@@ -82,6 +81,8 @@ public class ControladorPanelJogo implements ActionListener {
 				this.vez++;
 			}
 		}
+		
+		this.jogador = (this.vez % 2 == 0) ? 1 : 2;
 		
 		// Trocar label da vez dos Jogadores
 		if(this.jogador == 1) {
