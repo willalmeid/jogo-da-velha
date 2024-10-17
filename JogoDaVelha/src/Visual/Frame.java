@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 
 public class Frame extends JFrame {
 	
-	
 	public Frame() {
 		super();
 		this.setVisible(true); // Tornar ele visível.

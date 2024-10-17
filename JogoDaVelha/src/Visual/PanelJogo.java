@@ -27,15 +27,15 @@ public class PanelJogo extends JPanel{
 		this.setSize(1280, 720);
 		
 		
-		add(getButtonCenterCenter());
-		add(getButtonTopCenter());
-		add(getButtonBotCenter());
-		add(getButtonBotLeft());
-		add(getButtonBotRight());
-		add(getButtonCenterLeft());
-		add(getButtonCenterRigth());
 		add(getButtonTopLeft());
+		add(getButtonTopCenter());
 		add(getButtonTopRight());
+		add(getButtonCenterLeft());
+		add(getButtonCenterCenter());
+		add(getButtonCenterRight());
+		add(getButtonBotLeft());
+		add(getButtonBotCenter());
+		add(getButtonBotRight());
 		add(getLabelTitle());
 		add(getLabelJogada());
 		add(getLblOJogador());
@@ -63,7 +63,7 @@ public class PanelJogo extends JPanel{
 	//------------------------------------------------------------- Button Access Methods ---------------------------------------------------------------------
 	public JButton getButtonTopLeft() {
 		if (buttonTopLeft == null) {
-			buttonTopLeft = new JButton("X");
+			buttonTopLeft = new JButton();
 			buttonTopLeft.setFont(new Font("Tahoma", Font.BOLD, 50));
 			buttonTopLeft.setBounds(397, 115, 155, 156);
 		}
@@ -72,7 +72,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonTopCenter() {
 		if (buttonTopCenter == null) {
-			buttonTopCenter = new JButton("O");
+			buttonTopCenter = new JButton();
 			buttonTopCenter.setFont(new Font("Tahoma", Font.BOLD, 50));
 			buttonTopCenter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -85,7 +85,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonTopRight() {
 		if (buttonTopRight == null) {
-			buttonTopRight = new JButton("X");
+			buttonTopRight = new JButton();
 			buttonTopRight.setBounds(727, 115, 155, 156);
 			buttonTopRight.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
@@ -94,7 +94,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonCenterLeft() {
 		if (buttonCenterLeft == null) {
-			buttonCenterLeft = new JButton("O");
+			buttonCenterLeft = new JButton();
 			buttonCenterLeft.setBounds(397, 282, 155, 156);
 			buttonCenterLeft.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
@@ -103,7 +103,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonCenterCenter() {
 		if (buttonCenterCenter == null) {
-			buttonCenterCenter = new JButton("X");
+			buttonCenterCenter = new JButton();
 			buttonCenterCenter.setFont(new Font("Tahoma", Font.BOLD, 50));
 			buttonCenterCenter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -114,9 +114,9 @@ public class PanelJogo extends JPanel{
 		return buttonCenterCenter;
 	}
 	
-	public JButton getButtonCenterRigth() {
+	public JButton getButtonCenterRight() {
 		if (buttonCenterRigth == null) {
-			buttonCenterRigth = new JButton("O");
+			buttonCenterRigth = new JButton();
 			buttonCenterRigth.setBounds(727, 282, 155, 156);
 			buttonCenterRigth.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
@@ -125,7 +125,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonBotLeft() {
 		if (buttonBotLeft == null) {
-			buttonBotLeft = new JButton("X");
+			buttonBotLeft = new JButton();
 			buttonBotLeft.setBounds(397, 449, 155, 156);
 			buttonBotLeft.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
@@ -134,7 +134,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonBotCenter() {
 		if (buttonBotCenter == null) {
-			buttonBotCenter = new JButton("O");
+			buttonBotCenter = new JButton();
 			buttonBotCenter.setBounds(562, 449, 155, 156);
 			buttonBotCenter.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
@@ -143,7 +143,7 @@ public class PanelJogo extends JPanel{
 	
 	public JButton getButtonBotRight() {
 		if (buttonBotRight == null) {
-			buttonBotRight = new JButton("X");
+			buttonBotRight = new JButton();
 			buttonBotRight.setBounds(727, 449, 155, 156);
 			buttonBotRight.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
