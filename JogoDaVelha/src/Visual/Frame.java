@@ -12,15 +12,4 @@ public class Frame extends JFrame {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE); // Fechar quando apertar no x
 		this.setLocationRelativeTo(null); // Abrir ele no centro da tela
 	}
-	
-	public static void main(String[] args) {
-		Frame window = new Frame();
-		PanelJogo jogo = new PanelJogo();
-		
-		window.setContentPane(jogo);
-		
-		// Verificar Funcionalidade depois
-		window.repaint();
-		window.validate();
-	}
 }
