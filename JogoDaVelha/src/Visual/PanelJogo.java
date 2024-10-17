@@ -20,7 +20,7 @@ public class PanelJogo extends JPanel{
 	private JButton buttonTopRight;
 	private JLabel labelTitle;
 	private JLabel labelJogada;
-	private JLabel lblOJogador;
+	private JLabel labelGanhador;
 	
 	public PanelJogo() {
 		setLayout(null);
@@ -38,7 +38,7 @@ public class PanelJogo extends JPanel{
 		add(getButtonBotRight());
 		add(getLabelTitle());
 		add(getLabelJogada());
-		add(getLblOJogador());
+		add(getLabelGanhador());
 		
 	}
 	
@@ -150,13 +150,12 @@ public class PanelJogo extends JPanel{
 		return buttonBotRight;
 	}
 	
-	// RESULTADO
-	public JLabel getLblOJogador() {
-		if (lblOJogador == null) {
-			lblOJogador = new JLabel("O Jogador 1 Ganhou!");
-			lblOJogador.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			lblOJogador.setBounds(545, 616, 190, 25);
+	public JLabel getLabelGanhador() {
+		if (labelGanhador == null) {
+			labelGanhador = new JLabel("");
+			labelGanhador.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			labelGanhador.setBounds(545, 616, 190, 25);
 		}
-		return lblOJogador;
+		return labelGanhador;
 	}
 }
