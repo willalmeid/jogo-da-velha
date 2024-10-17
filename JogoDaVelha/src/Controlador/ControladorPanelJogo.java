@@ -32,28 +32,50 @@ public class ControladorPanelJogo implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
     	this.simbolo = (this.vez % 2 == 0) ? "X" : "O";
 		if(e.getSource() == panelJogo.getButtonTopLeft()) {
-			panelJogo.getButtonTopLeft().setText(simbolo);
-//			panelJogo.getButtonTopLeft().setText("X");
+			if(panelJogo.getButtonTopLeft().getText() == "") {
+				panelJogo.getButtonTopLeft().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonTopCenter()) {
-			panelJogo.getButtonTopCenter().setText(simbolo);
-//			panelJogo.getButtonTopCenter().setText("X");
+			if(panelJogo.getButtonTopCenter().getText() == "") {
+				panelJogo.getButtonTopCenter().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonTopRight()) {
-			panelJogo.getButtonTopRight().setText(simbolo);
-//			panelJogo.getButtonTopRight().setText("X");
+			if(panelJogo.getButtonTopRight().getText() == "") {
+				panelJogo.getButtonTopRight().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonCenterLeft()) {
-			panelJogo.getButtonCenterLeft().setText(simbolo);
-//			panelJogo.getButtonCenterLeft().setText("X");
+			if(panelJogo.getButtonCenterLeft().getText() == "") {
+				panelJogo.getButtonCenterLeft().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonCenterCenter()) {
-			panelJogo.getButtonCenterCenter().setText(simbolo);
+			if(panelJogo.getButtonCenterCenter().getText() == "") {
+				panelJogo.getButtonCenterCenter().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonCenterRight()) {
-			panelJogo.getButtonCenterRight().setText(simbolo);
+			if(panelJogo.getButtonCenterRight().getText() == "") {
+				panelJogo.getButtonCenterRight().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonBotLeft()) {
-			panelJogo.getButtonBotLeft().setText(simbolo);
+			if(panelJogo.getButtonBotLeft().getText() == "") {
+				panelJogo.getButtonBotLeft().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonBotCenter()) {
-			panelJogo.getButtonBotCenter().setText(simbolo);
+			if(panelJogo.getButtonBotCenter().getText() == "") {
+				panelJogo.getButtonBotCenter().setText(simbolo);				
+				this.vez++;
+			}
 		} else if(e.getSource() == panelJogo.getButtonBotRight()) {
-			panelJogo.getButtonBotRight().setText(simbolo);
+			if(panelJogo.getButtonBotRight().getText() == "") {
+				panelJogo.getButtonBotRight().setText(simbolo);				
+				this.vez++;
+			}
 		}
-        this.vez++;
 	}
 }

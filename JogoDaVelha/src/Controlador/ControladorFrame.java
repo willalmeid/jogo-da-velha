@@ -20,7 +20,6 @@ public class ControladorFrame implements ActionListener{
 		frame.setContentPane(panelJogo);
 		frame.revalidate();
 		frame.repaint();
-		
 	}
 
 	public void actionPerformed(ActionEvent e) {
