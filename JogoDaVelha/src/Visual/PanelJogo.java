@@ -154,7 +154,7 @@ public class PanelJogo extends JPanel{
 		if (labelGanhador == null) {
 			labelGanhador = new JLabel("");
 			labelGanhador.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			labelGanhador.setBounds(545, 616, 190, 25);
+			labelGanhador.setBounds(523, 616, 234, 25);
 		}
 		return labelGanhador;
 	}
