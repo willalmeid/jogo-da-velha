@@ -4,20 +4,20 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import Visual.Frame;
-import Visual.PanelJogo;
+import Visual.PanelTelaInicial;
 
 public class ControladorFrame implements ActionListener{
 
 	Frame frame;
 	
-	PanelJogo panelJogo;
-	ControladorPanelJogo controladorPanelJogo;
+	PanelTelaInicial panelTelaInicial;
+	ControladorPanelTelaInicial controladorPanelTelaInicial;
 	
 	public ControladorFrame() {
 		frame = new Frame();
-		PanelJogo panelJogo = new PanelJogo();
-		controladorPanelJogo = new ControladorPanelJogo(panelJogo);
-		frame.setContentPane(panelJogo);
+		panelTelaInicial = new PanelTelaInicial();
+		controladorPanelTelaInicial = new ControladorPanelTelaInicial(panelTelaInicial, frame);
+		frame.setContentPane(panelTelaInicial);
 		frame.revalidate();
 		frame.repaint();
 	}

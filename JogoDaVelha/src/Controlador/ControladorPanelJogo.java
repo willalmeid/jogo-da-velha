@@ -37,51 +37,51 @@ public class ControladorPanelJogo implements ActionListener {
     	this.simbolo = (this.vez % 2 == 0) ? "X" : "O";
     	
     	// Teste dos botões
-		if(e.getSource() == panelJogo.getButtonTopLeft()) {
-			if(panelJogo.getButtonTopLeft().getText() == "") {
-				panelJogo.getButtonTopLeft().setText(simbolo);				
-				this.vez++;
-			}
+		if(e.getSource() == panelJogo.getButtonTopLeft()) {		
+			panelJogo.getButtonTopLeft().setText(simbolo);
+			panelJogo.getButtonTopLeft().setEnabled(false);
+			this.vez++;
+			
 		} else if(e.getSource() == panelJogo.getButtonTopCenter()) {
-			if(panelJogo.getButtonTopCenter().getText() == "") {
-				panelJogo.getButtonTopCenter().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonTopCenter().setText(simbolo);
+			panelJogo.getButtonTopCenter().setEnabled(false);
+			this.vez++;
+			
 		} else if(e.getSource() == panelJogo.getButtonTopRight()) {
-			if(panelJogo.getButtonTopRight().getText() == "") {
-				panelJogo.getButtonTopRight().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonTopRight().setText(simbolo);
+			panelJogo.getButtonTopRight().setEnabled(false);
+			this.vez++;
+
 		} else if(e.getSource() == panelJogo.getButtonCenterLeft()) {
-			if(panelJogo.getButtonCenterLeft().getText() == "") {
-				panelJogo.getButtonCenterLeft().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonCenterLeft().setText(simbolo);	
+			panelJogo.getButtonCenterLeft().setEnabled(false);
+			this.vez++;
+			
 		} else if(e.getSource() == panelJogo.getButtonCenterCenter()) {
-			if(panelJogo.getButtonCenterCenter().getText() == "") {
-				panelJogo.getButtonCenterCenter().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonCenterCenter().setText(simbolo);
+			panelJogo.getButtonCenterCenter().setEnabled(false);
+			this.vez++;
+			
 		} else if(e.getSource() == panelJogo.getButtonCenterRight()) {
-			if(panelJogo.getButtonCenterRight().getText() == "") {
-				panelJogo.getButtonCenterRight().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonCenterRight().setText(simbolo);	
+			panelJogo.getButtonCenterRight().setEnabled(false);
+			this.vez++;
+			
 		} else if(e.getSource() == panelJogo.getButtonBotLeft()) {
-			if(panelJogo.getButtonBotLeft().getText() == "") {
-				panelJogo.getButtonBotLeft().setText(simbolo);				
-				this.vez++;
-			}
-		} else if(e.getSource() == panelJogo.getButtonBotCenter()) {
-			if(panelJogo.getButtonBotCenter().getText() == "") {
-				panelJogo.getButtonBotCenter().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonBotLeft().setText(simbolo);	
+			panelJogo.getButtonBotLeft().setEnabled(false);
+			this.vez++;
+			
+		} else if(e.getSource() == panelJogo.getButtonBotCenter()) {	
+			panelJogo.getButtonBotCenter().setText(simbolo);				
+			panelJogo.getButtonBotCenter().setEnabled(false);
+			this.vez++;
+			
 		} else if(e.getSource() == panelJogo.getButtonBotRight()) {
-			if(panelJogo.getButtonBotRight().getText() == "") {
-				panelJogo.getButtonBotRight().setText(simbolo);				
-				this.vez++;
-			}
+			panelJogo.getButtonBotRight().setText(simbolo);				
+			panelJogo.getButtonBotRight().setEnabled(false);
+			this.vez++;
+	
 		}
 		
 		this.jogador = (this.vez % 2 == 0) ? 1 : 2;
@@ -124,6 +124,25 @@ public class ControladorPanelJogo implements ActionListener {
 			} else {
 				panelJogo.getLabelGanhador().setText("O jogador 1 é o vencedor!");				
 			}
+			desabilitaBotoes();
 		}
+		
+		//caso de empate
+		if(this.vez == 9) {
+			panelJogo.getLabelGanhador().setText("Empate!");
+		}
+	}
+
+	//função que desabilita todos os botões após uma vitória
+	private void desabilitaBotoes() { 
+		panelJogo.getButtonTopLeft().setEnabled(false);	
+		panelJogo.getButtonTopCenter().setEnabled(false);	
+		panelJogo.getButtonTopRight().setEnabled(false);	
+		panelJogo.getButtonCenterLeft().setEnabled(false);	
+		panelJogo.getButtonCenterCenter().setEnabled(false);	
+		panelJogo.getButtonCenterRight().setEnabled(false);	
+		panelJogo.getButtonBotLeft().setEnabled(false);	
+		panelJogo.getButtonBotCenter().setEnabled(false);	
+		panelJogo.getButtonBotRight().setEnabled(false);	
 	}
 }
