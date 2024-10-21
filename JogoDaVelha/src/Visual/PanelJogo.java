@@ -9,6 +9,10 @@ import java.awt.Font;
 
 public class PanelJogo extends JPanel{
 	
+	private JLabel labelTitle;
+	private JLabel labelJogada;
+	private JLabel labelGanhador;
+	
 	private JButton buttonCenterCenter;
 	private JButton buttonTopCenter;
 	private JButton buttonBotCenter;
@@ -18,9 +22,7 @@ public class PanelJogo extends JPanel{
 	private JButton buttonCenterRigth;
 	private JButton buttonTopLeft;
 	private JButton buttonTopRight;
-	private JLabel labelTitle;
-	private JLabel labelJogada;
-	private JLabel labelGanhador;
+	private JButton buttonJogarDeNovo;
 	
 	public PanelJogo() {
 		setLayout(null);
@@ -39,7 +41,7 @@ public class PanelJogo extends JPanel{
 		add(getLabelTitle());
 		add(getLabelJogada());
 		add(getLabelGanhador());
-		
+		add(getButtonJogarDeNovo());
 	}
 	
 	//------------------------------------------------------------- Labal Access Methods ---------------------------------------------------------------------
@@ -58,6 +60,15 @@ public class PanelJogo extends JPanel{
 			labelJogada.setBounds(397, 81, 485, 25);
 		}
 		return labelJogada;
+	}
+	
+	public JLabel getLabelGanhador() {
+		if (labelGanhador == null) {
+			labelGanhador = new JLabel("");
+			labelGanhador.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			labelGanhador.setBounds(523, 616, 234, 25);
+		}
+		return labelGanhador;
 	}
 	
 	//------------------------------------------------------------- Button Access Methods ---------------------------------------------------------------------
@@ -150,12 +161,15 @@ public class PanelJogo extends JPanel{
 		return buttonBotRight;
 	}
 	
-	public JLabel getLabelGanhador() {
-		if (labelGanhador == null) {
-			labelGanhador = new JLabel("");
-			labelGanhador.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			labelGanhador.setBounds(523, 616, 234, 25);
+	public JButton getButtonJogarDeNovo() {
+		if(buttonJogarDeNovo == null) {
+			buttonJogarDeNovo = new JButton();
+			buttonJogarDeNovo.setVisible(false);
+			buttonJogarDeNovo.setEnabled(false);
+			buttonJogarDeNovo.setBounds(1028, 638, 155, 40);
+			buttonJogarDeNovo.setText("Novo Jogo");
+			buttonBotRight.setFont(new Font("Tahoma", Font.BOLD, 50));
 		}
-		return labelGanhador;
+		return buttonJogarDeNovo;
 	}
 }
