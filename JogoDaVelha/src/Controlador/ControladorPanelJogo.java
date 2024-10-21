@@ -45,6 +45,7 @@ public class ControladorPanelJogo implements ActionListener {
 			this.vez = 0;
 			limparPanel();
 			habilitarBotoes();
+			desativarButtonJogarDeNovo();
 		} else if(e.getSource() instanceof JButton) { // Ele verica se o e.getSouce() é um botão
     		JButton botao = (JButton) e.getSource();
     		atualizarTabuleiro(botao);    		
@@ -127,6 +128,12 @@ public class ControladorPanelJogo implements ActionListener {
 	private void ativarButtonJogarDeNovo() {
 		panelJogo.getButtonJogarDeNovo().setEnabled(true);
 		panelJogo.getButtonJogarDeNovo().setVisible(true);
+	}
+	
+	// Função que desativa o botão de jogar de novo
+	private void desativarButtonJogarDeNovo() {
+		panelJogo.getButtonJogarDeNovo().setEnabled(false);
+		panelJogo.getButtonJogarDeNovo().setVisible(false);
 	}
 	
 	
