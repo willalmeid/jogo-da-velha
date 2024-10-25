@@ -1,11 +1,11 @@
-package Controlador;
+package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Visual.PanelTelaInicial;
-import Visual.Frame;
-import Visual.PanelJogo;
+import visual.Frame;
+import visual.PanelJogo;
+import visual.PanelTelaInicial;
 
 public class ControladorPanelTelaInicial implements ActionListener {
 

@@ -1,4 +1,4 @@
-package Visual;
+package visual;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;

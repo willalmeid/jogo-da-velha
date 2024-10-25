@@ -1,11 +1,11 @@
-package Controlador;
+package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-import Visual.PanelJogo;
+import visual.PanelJogo;
 
 public class ControladorPanelJogo implements ActionListener {
 	
