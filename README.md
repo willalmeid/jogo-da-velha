@@ -4,7 +4,7 @@
   Projeto desenvolvido para a disciplina de Linguagem de Programação II do curso de Sistemas de Informação - UESB
 </p>
 
-<h2> Descrição do Projeto </h2>
+<h2> 🗒️ Descrição do Projeto </h2>
 
 <p>
 	Este repositório contém um jogo da velha (Tic-Tac-Toe) implementado em Java como parte de um projeto acadêmico. O projeto foi orientado pelo professor <strong>Murilo Santana</strong> e tem como objetivo aplicar os conceitos aprendidos na disciplina de Linguagem de Programação II, explorando práticas como:
@@ -19,6 +19,16 @@
 - Interface simples e intuitiva: Visual limpo e fácil de usar.
 - Verificação automática de vitória ou empate.
 - Tratamento de erros para garantir uma experiência sem falhas.
+
+<h2> 🤖 Tecnologias </h2>
+
+<p> Esse projeto utilizou as seguinte tecnoloogias </p>
+
+ - Java
+ - Git e GitHub
+ - Eclipse
+
+<h2> 👥 Colaboradores </h2>
 
 <p>
 	O desenvolvimento foi realizado de forma colaborativa pelos alunos:
